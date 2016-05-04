@@ -1,4 +1,4 @@
-import log from '../services/log';
+import log from '$services/log';
 
 export function renderViewInto(containerId, {
   makeInputConverter,

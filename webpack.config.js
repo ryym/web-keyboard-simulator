@@ -10,7 +10,10 @@ const HTML_TEMPLATE_PATH = path.join(SRC_PATH, 'index.template.html');
 
 module.exports = {
   resolve: {
-    extensions: ['', '.js', '.react.js']
+    extensions: ['', '.js', '.react.js'],
+    alias: {
+      $services: path.join(SRC_PATH, 'services')
+    }
   },
 
   entry: SRC_PATH,

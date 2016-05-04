@@ -1,5 +1,5 @@
-import { keyId } from '../../keyId';
-import { makeFunctionFromMap } from '../util';
+import { keyId } from '$services/keyId';
+import { makeFunctionFromMap } from '$services/input-converter/util';
 
 export default function makeConverterForJIS() {
   return makeFunctionFromMap({

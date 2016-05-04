@@ -1,4 +1,4 @@
-import { keyId } from '../keyId';
+import { keyId } from '$services/keyId';
 
 export default function outputAsUS(keyId, { shiftKey }) {
   const key = String(keyId);

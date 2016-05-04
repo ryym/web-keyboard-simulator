@@ -1,6 +1,6 @@
 import { makeInputConverterFromCode } from './code-converter';
 import { makeInputConverterFromKeyCode } from './key-code-converter';
-import log from '../log';
+import log from '$services/log';
 
 export function makeInputConverter({ keyboardEvent, ...context }) {
   if (keyboardEvent === undefined) {
