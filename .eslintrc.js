@@ -14,6 +14,10 @@ module.exports = {
     "react"
   ],
 
+  "globals": {
+    "$$Config": true
+  },
+
   "rules": {
     "jsx-quotes": [2, "prefer-double"],
     "react/jsx-closing-bracket-location": 2,

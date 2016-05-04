@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlTemplatePlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pcssAutoprefixer = require('autoprefixer');
@@ -58,6 +59,10 @@ module.exports = {
     new HtmlTemplatePlugin({
       template: HTML_TEMPLATE_PATH,
       inject: 'body'
+    }),
+
+    new webpack.DefinePlugin({
+      '$$Config.LOG_LEVEL': "'debug'"
     })
   ]
 };

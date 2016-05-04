@@ -1,6 +1,6 @@
 import log from 'loglevel';
 
-log.setLevel('debug');
+log.setLevel($$Config.LOG_LEVEL);
 
 const prefixes = {
   trace: '[trace]',
