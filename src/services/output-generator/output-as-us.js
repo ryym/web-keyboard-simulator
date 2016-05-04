@@ -7,8 +7,8 @@ export default function outputAsUS(keyId, { shiftKey }) {
     return '';
   }
 
-  const chars = characterMap[key];
-  return shiftKey ? chars[1] : chars[0];
+  const [normal, withShift] = characterMap[key];
+  return shiftKey ? withShift : normal;
 }
 
 const characterMap = {
@@ -59,4 +59,3 @@ const characterMap = {
   [keyId.PERIOD]: ['.', '>'],
   [keyId.SLASH]: ['/', '?']
 };
-
