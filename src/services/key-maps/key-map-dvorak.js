@@ -1,17 +1,6 @@
 import { keyId } from '$services/keyId';
 
-export default function outputAsDvorak(keyId, { shiftKey }) {
-  const key = String(keyId);
-
-  if (! characterMap.hasOwnProperty(key)) {
-    return '';
-  }
-
-  const [normal, withShift] = characterMap[key];
-  return shiftKey ? withShift : normal;
-}
-
-const characterMap = {
+export default {
   [keyId.DIGIT1]: ['1', '!'],
   [keyId.DIGIT2]: ['2', '@'],
   [keyId.DIGIT3]: ['3', '#'],
