@@ -1,4 +1,5 @@
 import usKeyMap from './key-maps/key-map-us';
+import jisKeyMap from './key-maps/key-map-jis';
 import dvorakKeyMap from './key-maps/key-map-dvorak';
 
 export function makeOutputGenerator(keyboardType) {
@@ -19,6 +20,7 @@ export function makeOutputGenerator(keyboardType) {
 function selectKeyMap(keyboardType) {
   switch (keyboardType) {
   case 'US': return usKeyMap;
+  case 'JIS': return jisKeyMap;
   case 'DVORAK': return dvorakKeyMap;
   }
 }
