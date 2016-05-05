@@ -1,37 +1,20 @@
-import log from '$services/log';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import KeyboardSimulator from './KeyboardSimulator';
 
 export function renderViewInto(containerId, {
   makeInputConverter,
   makeOutputGenerator
 }) {
   const $container = document.getElementById(containerId);
+  const keyboardEvent = document.createEvent('KeyboardEvent');
+  const simulatorProps = {
+    makeInputConverter: makeInputConverter(keyboardEvent),
+    makeOutputGenerator
+  };
 
-  const convert = makeInputConverter({
-    keyboardEvent: document.createEvent('KeyboardEvent'),
-    keyboardType: 'JIS'
-  });
-
-  const output = makeOutputGenerator('US');
-
-  $container.innerHTML = `
-    <textarea id="test"></textarea>
-    <textarea id="normal"></textarea>
-  `;
-
-  const $text = document.getElementById('test');
-
-  $text.addEventListener('keypress', (event) => {
-    const keyId = convert(event);
-
-    if (keyId !== undefined) {
-      event.preventDefault();
-      const character = output(keyId, event);
-      $text.value += character;
-
-      log.debug(event, keyId, character);
-    }
-    else {
-      log.debug(event, ' no match');
-    }
-  });
+  ReactDOM.render(
+    <KeyboardSimulator {...simulatorProps} />,
+    $container
+  );
 }
