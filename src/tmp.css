@@ -34,9 +34,25 @@ div {
 .key {
   border: 1px solid black;
   flex-grow: 1;
+  flex-basis: 0;
   margin: 0 1px;
-  height: 40px;
+  height: 42px;
   border-radius: 5px;
+  box-shadow: inset -1px -3px 1px #888;
+  padding: 0;
+  padding-top: 5px;
+  padding-left: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.key .label {
+  font-size: 10px;
+}
+
+.label + .label {
+  margin-top: 2px;
 }
 
 .key-m {
@@ -80,13 +96,13 @@ div {
 
 .key-j-return {
   position: absolute;
-  width: 62px;
+  width: 61px;
   padding: 0;
   right: 3px;
-  top: 46px;
+  top: 48px;
 }
 
-.key-j-return div {
+.key-j-return > div {
   height: 40px;
   border: 1px solid black;
   border-radius: 5px;
@@ -94,13 +110,14 @@ div {
 }
 
 .key-j-return .ledge {
-  width: 14px;
+  width: 13px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right: 1px solid white;
-  z-index: 3000;
+  z-index: 3;
   float: left;
   position: relative;
+  box-shadow: inset 1px -3px 1px #888;
 }
 
 .key-j-return .main {
@@ -108,8 +125,15 @@ div {
   float: right;
   position: relative;
   width: 49px;
-  height: 83px;
+  height: 86px;
   margin-left: -1px;
   border-top-left-radius: 0;
   background-color: #fff;
+  box-shadow: inset -1px -3px 1px #888;
+
+  padding-top: 5px;
+}
+
+.key-j-return .main .label {
+  font-size: 10px;
 }
