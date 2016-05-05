@@ -47,6 +47,13 @@ div {
   flex-direction: column;
 }
 
+.key.pressed {
+  background-color: #6d9ddd;
+  height: 39px;
+  align-self: flex-end;
+  box-shadow: inset -1px 0 1px #888;
+}
+
 .key .label {
   font-size: 10px;
 }
