@@ -37,7 +37,8 @@ module.exports = {
         test: /\.css$/,
         loaders: [
           'style',
-          'css?module',
+          // 'css?module',
+          'css',
           'postcss'
         ],
         include: SRC_PATH

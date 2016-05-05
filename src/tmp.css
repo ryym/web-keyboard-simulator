@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  margin-top: 20px;
+}
+
+.keyboard {
+  width: 700px;
+  height: 400px;
+  border: 1px solid #888;
+  padding: 10px 20px 30px;
+}
+
+.frame {
+  border: 1px solid #bbb;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  margin: 3px 2px;
+}
+
+.key {
+  border: 1px solid black;
+  flex-grow: 1;
+  margin: 0 1px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.key-m {
+  flex-grow: 1.5;
+}
+
+.key-ctrl {
+  flex-grow: 1.8;
+}
+
+.key-return {
+  flex-grow: 2.2;
+}
+
+.key-shift {
+  flex-grow: 2.5;
+}
+
+/* JIS */
+
+.key-j-m {
+  flex-grow: 1.5;
+}
+
+.key-j-ctrl {
+  flex-grow: 1.8;
+}
+
+.key-j-return-upper {
+  flex-grow: 1.5;
+  visibility: hidden;
+}
+.key-j-return-lower {
+  flex-grow: 1.2;
+  visibility: hidden;
+}
+
+.key-j-shift {
+  flex-grow: 2;
+}
+
+.key-j-return {
+  position: absolute;
+  width: 62px;
+  padding: 0;
+  right: 3px;
+  top: 46px;
+}
+
+.key-j-return div {
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.key-j-return .ledge {
+  width: 14px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 1px solid white;
+  z-index: 3000;
+  float: left;
+  position: relative;
+}
+
+.key-j-return .main {
+  z-index: 2;
+  float: right;
+  position: relative;
+  width: 49px;
+  height: 83px;
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  background-color: #fff;
+}
