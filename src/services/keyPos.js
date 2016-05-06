@@ -1,6 +1,9 @@
-
-
-export const keyId = generateKeyIds([
+/**
+ * keyPos defines the iD of each physical key position.
+ * The name of IDs are based on KeyboardEvent.code.
+ * (https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+ */
+export const keyPos = generateKeyPoses([
   'DIGIT1',
   'DIGIT2',
   'DIGIT3',
@@ -49,7 +52,7 @@ export const keyId = generateKeyIds([
   'SLASH'
 ]);
 
-function generateKeyIds(labels) {
+function generateKeyPoses(labels) {
   return labels.reduce((map, label) => {
     map[label] = label;
     return map;

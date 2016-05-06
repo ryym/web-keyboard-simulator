@@ -5,8 +5,8 @@ import dvorakKeyMap from './key-maps/key-map-dvorak';
 export function makeOutputGenerator(keyboardType) {
   const keyMap = selectKeyMap(keyboardType);
 
-  return (keyId, { shiftKey }) => {
-    const key = String(keyId);
+  return (keyPos, { shiftKey }) => {
+    const key = String(keyPos);
 
     if (! keyMap.hasOwnProperty(key)) {
       return '';

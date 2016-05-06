@@ -15,14 +15,14 @@ export default function InputScreen(props) {
 
 function makeKeypressHandler(convert, output) {
   return (event) => {
-    const keyId = convert(event.nativeEvent);
+    const keyPos = convert(event.nativeEvent);
 
-    if (keyId !== undefined) {
+    if (keyPos !== undefined) {
       event.preventDefault();
-      const character = output(keyId, event);
+      const character = output(keyPos, event);
       event.target.value += character;
 
-      log.debug(event, keyId, character);
+      log.debug(event, keyPos, character);
     }
     else {
       log.debug(event, ' no match');
