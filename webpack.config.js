@@ -34,12 +34,12 @@ module.exports = {
         include: SRC_PATH
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         loaders: [
           'style',
-          // 'css?module',
           'css',
-          'postcss'
+          'postcss',
+          'sass'
         ],
         include: SRC_PATH
       }
