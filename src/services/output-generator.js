@@ -6,14 +6,9 @@ export function makeOutputGenerator(keyboardType) {
   const keyMap = selectKeyMap(keyboardType);
 
   return (keyPos, { shiftKey }) => {
-    const key = String(keyPos);
-
-    if (! keyMap.hasOwnProperty(key)) {
-      return '';
-    }
-
-    const [normal, withShift] = keyMap[key];
-    return shiftKey ? withShift : normal;
+    const positionID = String(keyPos);
+    const key = keyMap[positionID];
+    return key ? key.getValue({ shiftKey }) : undefined;
   };
 }
 
