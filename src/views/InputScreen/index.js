@@ -2,20 +2,20 @@ import React from 'react';
 import log from '$services/log';
 
 export default function InputScreen(props) {
-  const convert = props.makeInputConverter({
+  const detectKeyPos = props.makeKeyPosDetector({
     keyboardType: 'JIS'
   });
   const output = props.makeOutputGenerator('US');
-  const handleKeypress = makeKeypressHandler(convert, output);
+  const handleKeypress = makeKeypressHandler(detectKeyPos, output);
 
   return (
     <textarea onKeyPress={handleKeypress} />
   )
 }
 
-function makeKeypressHandler(convert, output) {
+function makeKeypressHandler(detectKeyPos, output) {
   return (event) => {
-    const keyPos = convert(event.nativeEvent);
+    const keyPos = detectKeyPos(event.nativeEvent);
 
     if (keyPos !== undefined) {
       event.preventDefault();

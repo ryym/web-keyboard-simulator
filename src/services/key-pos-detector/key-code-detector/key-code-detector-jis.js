@@ -1,7 +1,7 @@
 import { keyPos } from '$services/keyPos';
-import { makeFunctionFromMap } from '$services/input-converter/util';
+import { makeFunctionFromMap } from '$services/key-pos-detector/util';
 
-export default function makeConverterForJIS() {
+export default function makeDetectorForJIS() {
   return makeFunctionFromMap({
     49: keyPos.DIGIT1,
     33: keyPos.DIGIT1,

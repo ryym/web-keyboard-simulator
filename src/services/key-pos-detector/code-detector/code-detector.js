@@ -1,9 +1,7 @@
 import { keyPos } from '$services/keyPos';
-import { makeFunctionFromMap } from '$services/input-converter/util';
+import { makeFunctionFromMap } from '$services/key-pos-detector/util';
 
-// KeyboardEvent.codeの値はキーボードのレイアウトに関係なく一定
-
-const convertInput = makeFunctionFromMap({
+const detectFromCode = makeFunctionFromMap({
   Digit1: keyPos.DIGIT1,
   Digit2: keyPos.DIGIT2,
   Digit3: keyPos.DIGIT3,
@@ -52,4 +50,4 @@ const convertInput = makeFunctionFromMap({
   Slash: keyPos.SLASH
 });
 
-export default convertInput;
+export default detectFromCode;

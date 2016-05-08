@@ -13,7 +13,7 @@ export default class KeyboardSimulator extends React.Component {
     const { props } = this;
     return (
       <InputScreen
-        makeInputConverter={props.makeInputConverter}
+        makeKeyPosDetector={props.makeKeyPosDetector}
         makeOutputGenerator={props.makeOutputGenerator}
       />
     );
