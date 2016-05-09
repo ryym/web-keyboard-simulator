@@ -9,23 +9,48 @@ import usKeyMap from '$services/key-maps/key-map-us';
 export default class KeyboardSimulator extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      pressedKeys: {}
+    }
+
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   render() {
-    const { props } = this;
+    const detectKeyPos = this.props.makeKeyPosDetector({
+      keyboardType: 'JIS'
+    });
+    const generateOutput = this.props.makeOutputGenerator('US');
+
     return (
       <div>
         <InputScreen
-          makeKeyPosDetector={props.makeKeyPosDetector}
-          makeOutputGenerator={props.makeOutputGenerator}
+          detectKeyPos={detectKeyPos}
+          generateOutput={generateOutput}
+          onKeyPressed={this.handleKeyPress}
+          onKeyUp={this.handleKeyUp}
         />
         <div>
           <Keyboard
             keyMap={usKeyMap}
-            pressedKeys={[]}
+            pressedKeys={this.state.pressedKeys}
           />
         </div>
       </div>
     );
+  }
+
+  handleKeyPress(keyPos) {
+    const { pressedKeys } = this.state;
+    pressedKeys[keyPos] = true;
+    this.setState({ pressedKeys });
+  }
+
+  handleKeyUp(keyPos) {
+    const { pressedKeys } = this.state;
+    delete pressedKeys[keyPos];
+    this.setState({ pressedKeys });
   }
 }
