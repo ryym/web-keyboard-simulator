@@ -5,15 +5,14 @@ import { keyPos } from '$services/keyPos';
 export default class USKeyboard extends React.Component {
   constructor(props) {
     super(props);
-    this.keyLayout = this._defineKeyLayout();
-    this.pressedKeys = this._makePressedKeyMap(props.pressedKeys);
+    this._keyLayout = this._defineKeyLayout();
   }
 
   render() {
     return (
       <div className="keyboard">
         <div className="keyboard_frame">
-          {this.renderKeyboard(this.keyLayout)}
+          {this.renderKeyboard(this._keyLayout)}
         </div>
       </div>
     )
@@ -28,9 +27,10 @@ export default class USKeyboard extends React.Component {
   }
 
   renderRow(keys) {
+    const { props } = this;
     return keys.map(posID => {
-      const key = this.props.keyMap[posID];
-      const pressed = this.pressedKeys.hasOwnProperty(posID);
+      const key = props.keyMap[posID];
+      const pressed = props.pressedKeys.hasOwnProperty(posID);
       return (
         <Key
           key={posID}
@@ -40,13 +40,6 @@ export default class USKeyboard extends React.Component {
         />
       )
     })
-  }
-
-  _makePressedKeyMap(pressedKeys = []) {
-    return pressedKeys.reduce((map, id) => {
-      map[id] = true;
-      return map;
-    }, {});
   }
 
   _defineKeyLayout() {
