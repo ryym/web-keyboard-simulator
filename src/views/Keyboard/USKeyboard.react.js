@@ -15,7 +15,7 @@ export default class USKeyboard extends React.Component {
           {this.renderKeyboard(this._keyLayout)}
         </div>
       </div>
-    )
+    );
   }
 
   renderKeyboard(keyRows) {
@@ -38,8 +38,8 @@ export default class USKeyboard extends React.Component {
           size={key.getSize()}
           pressed={pressed}
         />
-      )
-    })
+      );
+    });
   }
 
   _defineKeyLayout() {
@@ -97,7 +97,7 @@ export default class USKeyboard extends React.Component {
         keyPos.COMMA,
         keyPos.PERIOD,
         keyPos.SLASH
-      ],
-    ]
+      ]
+    ];
   }
 }

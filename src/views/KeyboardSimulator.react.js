@@ -12,7 +12,7 @@ export default class KeyboardSimulator extends React.Component {
 
     this.state = {
       pressedKeys: {}
-    }
+    };
 
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);

@@ -19,7 +19,7 @@ export default function InputScreen(props) {
       onKeyPress={handleKeypress}
       onKeyUp={handleKeyUp}
     />
-  )
+  );
 }
 
 function makeKeyPressHandler(props) {
@@ -43,7 +43,7 @@ function makeKeyPressHandler(props) {
     else {
       log.debug(event, ' no match');
     }
-  }
+  };
 }
 
 function makeKeyUpHandler(props) {
@@ -55,5 +55,5 @@ function makeKeyUpHandler(props) {
   return (event) => {
     const keyPos = detectKeyPos(event.nativeEvent);
     onKeyUp(keyPos);
-  }
+  };
 }

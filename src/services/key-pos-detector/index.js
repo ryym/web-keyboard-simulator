@@ -7,7 +7,7 @@ export const makeKeyPosDetector = ({ keyboardEvent }) => (keyboardType) => {
     return;
   }
 
-  const detectorOptions = {  keyboardType };
+  const detectorOptions = { keyboardType };
 
   if (keyboardEvent.code !== undefined) {
     log.debug('Use code detector');
@@ -18,4 +18,4 @@ export const makeKeyPosDetector = ({ keyboardEvent }) => (keyboardType) => {
     log.debug('Use keyCode detector');
     return makeKeyPosDetectorFromKeyCode(detectorOptions);
   }
-}
+};
