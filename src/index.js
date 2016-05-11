@@ -1,10 +1,10 @@
 import { makeKeyPosDetector } from './services/key-pos-detector';
-import { makeOutputGenerator } from './services/output-generator';
+import { makeKeyDataFinder } from './services/key-data-finder';
 import { renderViewInto } from './views';
 
 require('./styles.scss');
 
 renderViewInto('main', {
   makeKeyPosDetector,
-  makeOutputGenerator
+  makeKeyDataFinder
 });

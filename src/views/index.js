@@ -4,13 +4,13 @@ import KeyboardSimulator from './KeyboardSimulator';
 
 export function renderViewInto(containerId, {
   makeKeyPosDetector,
-  makeOutputGenerator
+  makeKeyDataFinder
 }) {
   const $container = document.getElementById(containerId);
   const keyboardEvent = document.createEvent('KeyboardEvent');
   const simulatorProps = {
     makeKeyPosDetector: makeKeyPosDetector({ keyboardEvent }),
-    makeOutputGenerator
+    makeKeyDataFinder
   };
 
   ReactDOM.render(

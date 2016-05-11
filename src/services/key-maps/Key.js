@@ -27,6 +27,6 @@ export default class Key {
   }
 
   isPrintable() {
-    return this._char !== null;
+    return this._char !== undefined;
   }
 }

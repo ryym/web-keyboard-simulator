@@ -2,13 +2,12 @@ import usKeyMap from './key-maps/key-map-us';
 import jisKeyMap from './key-maps/key-map-jis';
 import dvorakKeyMap from './key-maps/key-map-dvorak';
 
-export function makeOutputGenerator(keyboardType) {
+export function makeKeyDataFinder(keyboardType) {
   const keyMap = selectKeyMap(keyboardType);
 
-  return (keyPos, { shiftKey }) => {
+  return (keyPos) => {
     const positionID = String(keyPos);
-    const key = keyMap[positionID];
-    return key ? key.getValue({ shiftKey }) : undefined;
+    return keyMap[positionID];
   };
 }
 

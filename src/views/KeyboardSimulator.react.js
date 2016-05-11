@@ -22,13 +22,13 @@ export default class KeyboardSimulator extends React.Component {
     const detectKeyPos = this.props.makeKeyPosDetector({
       keyboardType: 'JIS'
     });
-    const generateOutput = this.props.makeOutputGenerator('US');
+    const findKeyData = this.props.makeKeyDataFinder('US');
 
     return (
       <div>
         <InputScreen
           detectKeyPos={detectKeyPos}
-          generateOutput={generateOutput}
+          findKeyData={findKeyData}
           onKeyPressed={this.handleKeyPress}
           onKeyUp={this.handleKeyUp}
         />

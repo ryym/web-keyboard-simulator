@@ -25,24 +25,30 @@ export default function InputScreen(props) {
 function makeKeyDownHandler(props) {
   const {
     detectKeyPos,
-    generateOutput,
+    findKeyData,
     onKeyPressed
   } = props;
 
-  return (event) => {
-    const keyPos = detectKeyPos(event.nativeEvent);
+  return (wrappedEvent) => {
+    const event = wrappedEvent.nativeEvent;
+    const keyPos = detectKeyPos(event);
 
-    if (keyPos !== undefined) {
-      event.preventDefault();
-      const character = generateOutput(keyPos, event);
-      event.target.value += character || '';
-      onKeyPressed(keyPos);
-
-      log.debug(event, keyPos, character);
-    }
-    else {
+    if (keyPos === undefined) {
       log.debug(event, ' no match');
+      return;
     }
+
+    const keyData = findKeyData(keyPos);
+
+    // Don't prevent special actions like `Tab`, `Delete`, `Ctrl+F`, etc.
+    if (keyData.isPrintable() && ! event.ctrlKey) {
+      event.preventDefault();
+      const character = keyData.getValue({ shiftKey: event.shiftKey });
+      event.target.value += character || '';
+    }
+
+    onKeyPressed(keyPos);
+    log.debug(event, keyPos, keyData);
   };
 }
 
