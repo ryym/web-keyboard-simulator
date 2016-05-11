@@ -45,6 +45,7 @@ export default class USKeyboard extends React.Component {
   _defineKeyLayout() {
     return [
       [
+        keyPos.ESCAPE,
         keyPos.DIGIT1,
         keyPos.DIGIT2,
         keyPos.DIGIT3,
@@ -56,9 +57,12 @@ export default class USKeyboard extends React.Component {
         keyPos.DIGIT9,
         keyPos.DIGIT0,
         keyPos.MINUS,
-        keyPos.EQUAL
+        keyPos.EQUAL,
+        keyPos.INTL_YEN,
+        keyPos.BACKQUOTE
       ],
       [
+        keyPos.TAB,
         keyPos.KEY_Q,
         keyPos.KEY_W,
         keyPos.KEY_E,
@@ -70,9 +74,11 @@ export default class USKeyboard extends React.Component {
         keyPos.KEY_O,
         keyPos.KEY_P,
         keyPos.BRACKET_LEFT,
-        keyPos.BRACKET_RIGHT
+        keyPos.BRACKET_RIGHT,
+        keyPos.BACKSPACE
       ],
       [
+        keyPos.CONTROL_LEFT,
         keyPos.KEY_A,
         keyPos.KEY_S,
         keyPos.KEY_D,
@@ -84,9 +90,11 @@ export default class USKeyboard extends React.Component {
         keyPos.KEY_L,
         keyPos.KEY_P,
         keyPos.SEMICOLON,
-        keyPos.QUOTE
+        keyPos.QUOTE,
+        keyPos.ENTER
       ],
       [
+        keyPos.SHIFT_LEFT,
         keyPos.KEY_Z,
         keyPos.KEY_X,
         keyPos.KEY_C,
@@ -96,7 +104,8 @@ export default class USKeyboard extends React.Component {
         keyPos.KEY_M,
         keyPos.COMMA,
         keyPos.PERIOD,
-        keyPos.SLASH
+        keyPos.SLASH,
+        keyPos.SHIFT_RIGHT
       ]
     ];
   }

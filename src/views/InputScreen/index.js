@@ -2,7 +2,7 @@ import React from 'react';
 import log from '$services/log';
 
 /**
- * InputScreen handles key-press and key-up events
+ * InputScreen handles key-down and key-up events
  * and display its output on the specified keyboard.
  *
  * XXX:
@@ -11,18 +11,18 @@ import log from '$services/log';
  *  from the container component.
  */
 export default function InputScreen(props) {
-  const handleKeypress = makeKeyPressHandler(props);
+  const handleKeyDown = makeKeyDownHandler(props);
   const handleKeyUp = makeKeyUpHandler(props);
 
   return (
     <textarea
-      onKeyPress={handleKeypress}
+      onKeyDown={handleKeyDown}
       onKeyUp={handleKeyUp}
     />
   );
 }
 
-function makeKeyPressHandler(props) {
+function makeKeyDownHandler(props) {
   const {
     detectKeyPos,
     generateOutput,
