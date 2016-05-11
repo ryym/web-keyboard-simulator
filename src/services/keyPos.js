@@ -4,6 +4,7 @@
  * (https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
  */
 export const keyPos = generateKeyPoses([
+  'ESCAPE',
   'DIGIT1',
   'DIGIT2',
   'DIGIT3',
@@ -17,6 +18,8 @@ export const keyPos = generateKeyPoses([
   'MINUS',
   'EQUAL',
   'INTL_YEN',
+  'BACKQUOTE',
+  'TAB',
   'KEY_Q',
   'KEY_W',
   'KEY_E',
@@ -29,6 +32,8 @@ export const keyPos = generateKeyPoses([
   'KEY_P',
   'BRACKET_LEFT',
   'BRACKET_RIGHT',
+  'BACKSPACE',
+  'CONTROL_LEFT',
   'KEY_A',
   'KEY_S',
   'KEY_D',
@@ -40,6 +45,8 @@ export const keyPos = generateKeyPoses([
   'KEY_L',
   'SEMICOLON',
   'QUOTE',
+  'ENTER',
+  'SHIFT_LEFT',
   'KEY_Z',
   'KEY_X',
   'KEY_C',
@@ -49,7 +56,8 @@ export const keyPos = generateKeyPoses([
   'KEY_M',
   'COMMA',
   'PERIOD',
-  'SLASH'
+  'SLASH',
+  'SHIFT_RIGHT'
 ]);
 
 function generateKeyPoses(labels) {

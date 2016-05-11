@@ -2,6 +2,7 @@ import { keyPos } from '$services/keyPos';
 import Key from './Key';
 
 export default {
+  [keyPos.ESCAPE]: new Key([], ['Esc']),
   [keyPos.DIGIT1]: new Key(['1', '!']),
   [keyPos.DIGIT2]: new Key(['2', '@']),
   [keyPos.DIGIT3]: new Key(['3', '#']),
@@ -15,6 +16,8 @@ export default {
   [keyPos.MINUS]: new Key(['-', '_']),
   [keyPos.EQUAL]: new Key(['=', '+']),
   [keyPos.INTL_YEN]: new Key(['\\', '|']),
+  [keyPos.BACKQUOTE]: new Key(['~', '`']),
+  [keyPos.TAB]: new Key([], ['Tab'], { size: 1.5 }),
   [keyPos.KEY_Q]: new Key(['q', 'Q'], ['Q']),
   [keyPos.KEY_W]: new Key(['w', 'W'], ['W']),
   [keyPos.KEY_E]: new Key(['e', 'E'], ['E']),
@@ -27,6 +30,8 @@ export default {
   [keyPos.KEY_P]: new Key(['p', 'P'], ['P']),
   [keyPos.BRACKET_LEFT]: new Key(['[', '{']),
   [keyPos.BRACKET_RIGHT]: new Key([']', '}']),
+  [keyPos.BACKSPACE]: new Key([], ['Delete'], { size: 1.5 }),
+  [keyPos.CONTROL_LEFT]: new Key([], ['Ctrl'], { size: 1.8 }),
   [keyPos.KEY_A]: new Key(['a', 'A'], ['A']),
   [keyPos.KEY_S]: new Key(['s', 'S'], ['S']),
   [keyPos.KEY_D]: new Key(['d', 'D'], ['D']),
@@ -38,6 +43,8 @@ export default {
   [keyPos.KEY_L]: new Key(['l', 'L'], ['L']),
   [keyPos.SEMICOLON]: new Key([';', ':']),
   [keyPos.QUOTE]: new Key(['\'', '"']),
+  [keyPos.ENTER]: new Key([], ['Enter'], { size: 2.2 }),
+  [keyPos.SHIFT_LEFT]: new Key([], ['Shift'], { size: 2.5 }),
   [keyPos.KEY_Z]: new Key(['z', 'Z'], ['Z']),
   [keyPos.KEY_X]: new Key(['x', 'X'], ['X']),
   [keyPos.KEY_C]: new Key(['c', 'C'], ['C']),
@@ -47,6 +54,7 @@ export default {
   [keyPos.KEY_M]: new Key(['m', 'M'], ['M']),
   [keyPos.COMMA]: new Key([',', '<']),
   [keyPos.PERIOD]: new Key(['.', '>']),
-  [keyPos.SLASH]: new Key(['/', '?'])
+  [keyPos.SLASH]: new Key(['/', '?']),
+  [keyPos.SHIFT_RIGHT]: new Key([], ['Shift'], { size: 2.5 })
 };
 

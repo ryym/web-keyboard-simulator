@@ -2,6 +2,7 @@ import { keyPos } from '$services/keyPos';
 import { makeFunctionFromMap } from '$services/key-pos-detector/util';
 
 const detectFromCode = makeFunctionFromMap({
+  Escape: keyPos.ESCAPE,
   Digit1: keyPos.DIGIT1,
   Digit2: keyPos.DIGIT2,
   Digit3: keyPos.DIGIT3,
@@ -15,6 +16,8 @@ const detectFromCode = makeFunctionFromMap({
   Minus: keyPos.MINUS,
   Equal: keyPos.EQUAL,
   IntlYen: keyPos.INTL_YEN,
+  Backquote: keyPos.BACKQUOTE,
+  Tab: keyPos.TAB,
   KeyQ: keyPos.KEY_Q,
   KeyW: keyPos.KEY_W,
   KeyE: keyPos.KEY_E,
@@ -27,6 +30,8 @@ const detectFromCode = makeFunctionFromMap({
   KeyP: keyPos.KEY_P,
   BracketLeft: keyPos.BRACKET_LEFT,
   BracketRight: keyPos.BRACKET_RIGHT,
+  Backspace: keyPos.BACKSPACE,
+  ControlLeft: keyPos.CONTROL_LEFT,
   KeyA: keyPos.KEY_A,
   KeyS: keyPos.KEY_S,
   KeyD: keyPos.KEY_D,
@@ -38,6 +43,8 @@ const detectFromCode = makeFunctionFromMap({
   KeyL: keyPos.KEY_L,
   Semicolon: keyPos.SEMICOLON,
   Quote: keyPos.QUOTE,
+  Enter: keyPos.ENTER,
+  ShiftLeft: keyPos.SHIFT_LEFT,
   KeyZ: keyPos.KEY_Z,
   KeyX: keyPos.KEY_X,
   KeyC: keyPos.KEY_C,
@@ -47,7 +54,8 @@ const detectFromCode = makeFunctionFromMap({
   KeyM: keyPos.KEY_M,
   Comma: keyPos.COMMA,
   Period: keyPos.PERIOD,
-  Slash: keyPos.SLASH
+  Slash: keyPos.SLASH,
+  ShiftRight: keyPos.SHIFT_RIGHT
 });
 
 export default detectFromCode;
