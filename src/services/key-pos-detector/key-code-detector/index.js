@@ -1,5 +1,7 @@
 import makeDetectorForJIS from './key-code-detector-jis';
 
+// TODO: Imlement detectors that use keyCode for detection.
+
 export function makeKeyPosDetectorFromKeyCode({ keyboardType, ...context }) {
   const detectFromKeyCode = makeDetectorFor(keyboardType, context);
 
