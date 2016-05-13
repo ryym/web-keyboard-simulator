@@ -1,0 +1,22 @@
+.header {
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+
+  &_brand {
+    padding: 0 10px;
+  }
+
+  &_nav {
+    &-list {
+      display: flex;
+      list-style-type: none;
+    }
+
+    &-item {
+
+    }
+  }
+}
+

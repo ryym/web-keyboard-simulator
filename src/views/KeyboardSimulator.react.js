@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from './Header';
+import SideMenu from './SideMenu';
 import InputScreen from './InputScreen';
 import Keyboard from './Keyboard';
 import usKeyMap from '$services/key-maps/key-map-us';
@@ -25,20 +27,22 @@ export default class KeyboardSimulator extends React.Component {
     const findKeyData = this.props.makeKeyDataFinder('US');
 
     return (
-      <div>
-        <InputScreen
-          detectKeyPos={detectKeyPos}
-          findKeyData={findKeyData}
-          onKeyPressed={this.handleKeyPress}
-          onKeyUp={this.handleKeyUp}
-        />
+      <main>
+        <Header />
         <div>
+          <InputScreen
+            detectKeyPos={detectKeyPos}
+            findKeyData={findKeyData}
+            onKeyPressed={this.handleKeyPress}
+            onKeyUp={this.handleKeyUp}
+          />
           <Keyboard
             keyMap={usKeyMap}
             pressedKeys={this.state.pressedKeys}
           />
         </div>
-      </div>
+        <SideMenu />
+      </main>
     );
   }
 
