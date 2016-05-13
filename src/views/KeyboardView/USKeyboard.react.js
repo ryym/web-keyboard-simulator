@@ -1,48 +1,21 @@
 import React from 'react';
-import Key from './Key';
 import { keyPos } from '$services/keyPos';
 
 export default class USKeyboard extends React.Component {
   constructor(props) {
     super(props);
-    this._keyLayout = this._defineKeyLayout();
+    this._keyLayout = this.defineKeyLayout();
   }
 
   render() {
     return (
-      <div className="keyboard">
-        <div className="keyboard_frame">
-          {this.renderKeyboard(this._keyLayout)}
-        </div>
+      <div>
+        {this.props.renderKeyboard(this._keyLayout)}
       </div>
     );
   }
 
-  renderKeyboard(keyRows) {
-    return keyRows.map((keys, i) => (
-      <div key={`us-${i}`} className="keyboard_row">
-        {this.renderRow(keys)}
-      </div>
-    ));
-  }
-
-  renderRow(keys) {
-    const { props } = this;
-    return keys.map(posID => {
-      const key = props.keyMap[posID];
-      const pressed = props.pressedKeys.hasOwnProperty(posID);
-      return (
-        <Key
-          key={posID}
-          labels={key.getLabels()}
-          size={key.getSize()}
-          pressed={pressed}
-        />
-      );
-    });
-  }
-
-  _defineKeyLayout() {
+  defineKeyLayout() {
     return [
       [
         keyPos.ESCAPE,

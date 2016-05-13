@@ -2,8 +2,7 @@ import React from 'react';
 import Header from './Header';
 import SideMenu from './SideMenu';
 import InputScreen from './InputScreen';
-import Keyboard from './Keyboard';
-import usKeyMap from '$services/key-maps/key-map-us';
+import KeyboardView from './KeyboardView';
 
 /**
  * KeyboardSimulator is a container of whole components.
@@ -36,9 +35,9 @@ export default class KeyboardSimulator extends React.Component {
             onKeyPressed={this.handleKeyPress}
             onKeyUp={this.handleKeyUp}
           />
-          <Keyboard
-            keyMap={usKeyMap}
+          <KeyboardView
             pressedKeys={this.state.pressedKeys}
+            keyboardType="US"
           />
         </div>
         <SideMenu />
