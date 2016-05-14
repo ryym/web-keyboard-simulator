@@ -1,7 +1,7 @@
 import React from 'react';
 import { keyPos } from '$services/keyPos';
 
-export default class USKeyboard extends React.Component {
+export default class StandardKeyboard extends React.Component {
   constructor(props) {
     super(props);
     this._keyLayout = this.defineKeyLayout();
@@ -18,7 +18,7 @@ export default class USKeyboard extends React.Component {
   defineKeyLayout() {
     return [
       [
-        keyPos.ESCAPE,
+        keyPos.BACKQUOTE,
         keyPos.DIGIT1,
         keyPos.DIGIT2,
         keyPos.DIGIT3,
@@ -31,8 +31,7 @@ export default class USKeyboard extends React.Component {
         keyPos.DIGIT0,
         keyPos.MINUS,
         keyPos.EQUAL,
-        keyPos.INTL_YEN,
-        keyPos.BACKQUOTE
+        keyPos.BACKSPACE
       ],
       [
         keyPos.TAB,
@@ -48,7 +47,7 @@ export default class USKeyboard extends React.Component {
         keyPos.KEY_P,
         keyPos.BRACKET_LEFT,
         keyPos.BRACKET_RIGHT,
-        keyPos.BACKSPACE
+        keyPos.INTL_YEN
       ],
       [
         keyPos.CONTROL_LEFT,
@@ -82,3 +81,4 @@ export default class USKeyboard extends React.Component {
     ];
   }
 }
+

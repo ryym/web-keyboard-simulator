@@ -1,7 +1,6 @@
 import React from 'react';
 import Key from './Key';
-import USKeyboard from './USKeyboard';
-import DvorakKeyboard from './DvorakKeyboard';
+import StandardKeyboard from './StandardKeyboard';
 import usKeyMap from '$services/key-maps/key-map-us';
 import dvorakKeyMap from '$services/key-maps/key-map-dvorak';
 
@@ -38,9 +37,8 @@ export default class Keyboard extends React.Component {
   selectLayout(type) {
     switch (type) {
     case 'US':
-      return USKeyboard;
     case 'DVORAK':
-      return DvorakKeyboard;
+      return StandardKeyboard;
     }
   }
 
