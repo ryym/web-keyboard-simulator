@@ -9,13 +9,14 @@ export default class Keyboard extends React.Component {
   constructor(props) {
     super(props);
 
-    this._keyMap = this.selectKeyMap(props.keyboardType);
     this.renderKeyboard = this.renderKeyboard.bind(this);
     this.renderRow = this.renderRow.bind(this);
   }
 
   render() {
-    const SelectedKeyboard = this.selectLayout(this.props.keyboardType);
+    const { keyboardType } = this.props;
+    const SelectedKeyboard = this.selectLayout(keyboardType);
+    this._keyMap = this.selectKeyMap(keyboardType);
     return (
       <div className="keyboard">
         <div className="keyboard_frame">

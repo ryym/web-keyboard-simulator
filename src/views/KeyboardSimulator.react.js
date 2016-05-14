@@ -12,22 +12,29 @@ export default class KeyboardSimulator extends React.Component {
     super(props);
 
     this.state = {
-      pressedKeys: {}
+      pressedKeys: {},
+      userKeyboardType: 'US',
+      simulationKeyboardType: 'US'
     };
 
+    this.changeKeyboard = this.changeKeyboard.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   render() {
+    const { userKeyboardType, simulationKeyboardType } = this.state;
     const detectKeyPos = this.props.makeKeyPosDetector({
-      keyboardType: 'JIS'
+      keyboardType: userKeyboardType
     });
-    const findKeyData = this.props.makeKeyDataFinder('US');
+    const findKeyData = this.props.makeKeyDataFinder(simulationKeyboardType);
 
     return (
       <main>
         <Header />
+        <SideMenu
+          onKeyboardTypeChange={this.changeKeyboard}
+        />
         <div>
           <InputScreen
             detectKeyPos={detectKeyPos}
@@ -37,12 +44,17 @@ export default class KeyboardSimulator extends React.Component {
           />
           <KeyboardView
             pressedKeys={this.state.pressedKeys}
-            keyboardType="US"
+            keyboardType={simulationKeyboardType}
           />
         </div>
-        <SideMenu />
       </main>
     );
+  }
+
+  changeKeyboard(changeType, keyboardType) {
+    this.setState({
+      [changeType]: keyboardType
+    });
   }
 
   handleKeyPress(keyPos) {
