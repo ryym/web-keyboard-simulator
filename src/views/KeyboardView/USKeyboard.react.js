@@ -61,7 +61,6 @@ export default class USKeyboard extends React.Component {
         keyPos.KEY_J,
         keyPos.KEY_K,
         keyPos.KEY_L,
-        keyPos.KEY_P,
         keyPos.SEMICOLON,
         keyPos.QUOTE,
         keyPos.ENTER
