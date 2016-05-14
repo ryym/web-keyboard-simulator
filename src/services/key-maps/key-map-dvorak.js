@@ -2,6 +2,7 @@ import { keyPos } from '$services/keyPos';
 import Key from './Key';
 
 export default {
+  [keyPos.BACKQUOTE]: new Key(['~', '`']),
   [keyPos.DIGIT1]: new Key(['1', '!']),
   [keyPos.DIGIT2]: new Key(['2', '@']),
   [keyPos.DIGIT3]: new Key(['3', '#']),
@@ -14,6 +15,8 @@ export default {
   [keyPos.DIGIT0]: new Key(['0', ')']),
   [keyPos.MINUS]: new Key(['[', '{']),
   [keyPos.EQUAL]: new Key([']', '}']),
+  [keyPos.BACKSPACE]: new Key([], ['Delete'], { size: 1.5 }),
+  [keyPos.TAB]: new Key([], ['Tab'], { size: 1.5 }),
   [keyPos.KEY_Q]: new Key(['\'', '"']),
   [keyPos.KEY_W]: new Key([',', '<']),
   [keyPos.KEY_E]: new Key(['.', '>']),
@@ -24,8 +27,10 @@ export default {
   [keyPos.KEY_I]: new Key(['c', 'C'], ['C']),
   [keyPos.KEY_O]: new Key(['r', 'R'], ['R']),
   [keyPos.KEY_P]: new Key(['l', 'L'], ['L']),
-  [keyPos.BRACKET_LEFT]: new Key(['/', '{']),
-  [keyPos.BRACKET_RIGHT]: new Key(['=', '}']),
+  [keyPos.BRACKET_LEFT]: new Key(['/', '?']),
+  [keyPos.BRACKET_RIGHT]: new Key(['=', '+']),
+  [keyPos.INTL_YEN]: new Key(['\\', '|']),
+  [keyPos.CONTROL_LEFT]: new Key([], ['Ctrl'], { size: 1.8 }),
   [keyPos.KEY_A]: new Key(['a', 'A'], ['A']),
   [keyPos.KEY_S]: new Key(['o', 'O'], ['O']),
   [keyPos.KEY_D]: new Key(['e', 'E'], ['E']),
@@ -37,6 +42,8 @@ export default {
   [keyPos.KEY_L]: new Key(['n', 'N'], ['N']),
   [keyPos.SEMICOLON]: new Key(['s', 'S'], ['S']),
   [keyPos.QUOTE]: new Key(['-', '_']),
+  [keyPos.ENTER]: new Key([], ['Enter'], { size: 2.2 }),
+  [keyPos.SHIFT_LEFT]: new Key([], ['Shift'], { size: 2.5 }),
   [keyPos.KEY_Z]: new Key([':', ';']),
   [keyPos.KEY_X]: new Key(['q', 'Q'], ['Q']),
   [keyPos.KEY_C]: new Key(['j', 'J'], ['J']),
@@ -46,6 +53,7 @@ export default {
   [keyPos.KEY_M]: new Key(['m', 'M'], ['M']),
   [keyPos.COMMA]: new Key(['w', 'W'], ['W']),
   [keyPos.PERIOD]: new Key(['v', 'V'], ['V']),
-  [keyPos.SLASH]: new Key(['z', 'Z'], ['Z'])
+  [keyPos.SLASH]: new Key(['z', 'Z'], ['Z']),
+  [keyPos.SHIFT_RIGHT]: new Key([], ['Shift'], { size: 2.5 })
 };
 
