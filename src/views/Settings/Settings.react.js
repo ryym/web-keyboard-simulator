@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function Settings({ onKeyboardTypeChange }) {
+export default function Settings(props) {
+  const {
+    onKeyboardTypeChange,
+    userKeyboardType,
+    simulationKeyboardType
+  } = props;
+
   function handleUserKeyboardChange(event) {
     onKeyboardTypeChange('userKeyboardType', event.target.value);
   }
@@ -14,6 +20,7 @@ export default function Settings({ onKeyboardTypeChange }) {
         <select
           className="setting-keyboard_item setting-keyboard-from"
           onChange={handleUserKeyboardChange}
+          value={userKeyboardType}
         >
           <option value="US">US</option>
           <option value="DVORAK">Dvorak</option>
@@ -24,6 +31,7 @@ export default function Settings({ onKeyboardTypeChange }) {
         <select
           className="setting-keyboard_item setting-keyboard-to"
           onChange={handleSimulationKeyboardChange}
+          value={simulationKeyboardType}
         >
           <option value="US">US</option>
           <option value="DVORAK">Dvorak</option>

@@ -16,7 +16,7 @@ export default class KeyboardSimulator extends React.Component {
     this.state = {
       pressedKeys: {},
       userKeyboardType: 'US',
-      simulationKeyboardType: 'US'
+      simulationKeyboardType: 'DVORAK'
     };
 
     this.changeKeyboard = this.changeKeyboard.bind(this);
@@ -38,6 +38,8 @@ export default class KeyboardSimulator extends React.Component {
           <div className="main_item main_item-settings">
             <Settings
               onKeyboardTypeChange={this.changeKeyboard}
+              userKeyboardType={userKeyboardType}
+              simulationKeyboardType={simulationKeyboardType}
             />
           </div>
           <div className="main_item main_item-simulator">
