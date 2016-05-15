@@ -32,22 +32,26 @@ export default class KeyboardSimulator extends React.Component {
     const findKeyData = this.props.makeKeyDataFinder(simulationKeyboardType);
 
     return (
-      <main>
+      <main className="container">
         <Header />
-        <Settings
-          onKeyboardTypeChange={this.changeKeyboard}
-        />
-        <div>
-          <InputScreen
-            detectKeyPos={detectKeyPos}
-            findKeyData={findKeyData}
-            onKeyPressed={this.handleKeyPress}
-            onKeyUp={this.handleKeyUp}
-          />
-          <KeyboardView
-            pressedKeys={this.state.pressedKeys}
-            keyboardType={simulationKeyboardType}
-          />
+        <div className="main">
+          <div className="main_item main_item-settings">
+            <Settings
+              onKeyboardTypeChange={this.changeKeyboard}
+            />
+          </div>
+          <div className="main_item main_item-simulator">
+            <InputScreen
+              detectKeyPos={detectKeyPos}
+              findKeyData={findKeyData}
+              onKeyPressed={this.handleKeyPress}
+              onKeyUp={this.handleKeyUp}
+            />
+            <KeyboardView
+              pressedKeys={this.state.pressedKeys}
+              keyboardType={simulationKeyboardType}
+            />
+          </div>
         </div>
       </main>
     );

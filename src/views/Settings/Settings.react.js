@@ -9,16 +9,15 @@ export default function Settings({ onKeyboardTypeChange }) {
   }
 
   return (
-    <section className="settings">
-      <div className="settings_keyboard-from">
+    <section className="setting">
+      <div className="setting-item setting_keyboard-from">
         <span>Using</span>
         <select onChange={handleUserKeyboardChange}>
           <option value="US">US</option>
           <option value="DVORAK">Dvorak</option>
         </select>
-        <span>,</span>
       </div>
-      <div className="settings_keyboard-from">
+      <div className="setting-item setting_keyboard-to">
         <span>Simulate</span>
         <select onChange={handleSimulationKeyboardChange}>
           <option value="US">US</option>

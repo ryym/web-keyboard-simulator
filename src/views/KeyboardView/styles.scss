@@ -1,14 +1,16 @@
 /* Keyboard styles */
 
 .keyboard {
-  width: 700px;
+  width: 100%;
   height: 300px;
   border: 1px solid #888;
+  border-radius: 5px;
   padding: 10px 20px 30px;
   margin-top: 20px;
 
   &_frame {
     border: 1px solid #bbb;
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -25,7 +27,7 @@
     flex-grow: 1;
     flex-basis: 0;
     margin: 0 1px;
-    height: 42px;
+    height: 48px;
     border-radius: 5px;
     box-shadow: inset -1px -3px 1px #888;
     padding: 0;
@@ -37,7 +39,7 @@
 
     &.is-key-pressed {
       background-color: #6d9ddd;
-      height: 39px;
+      height: 42px;
       align-self: flex-end;
       box-shadow: inset -1px 0 1px #888;
     }

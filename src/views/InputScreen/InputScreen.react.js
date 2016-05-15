@@ -17,6 +17,7 @@ export default function InputScreen(props) {
   return (
     <section className="input-screen">
       <textarea
+        className="input-screen_textarea"
         onKeyDown={handleKeyDown}
         onKeyUp={handleKeyUp}
       />

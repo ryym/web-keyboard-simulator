@@ -1,6 +1,9 @@
-/* Keyboard styles */
+/* Input Screen styles */
 
 .input-screen {
-  margin: 15px 0 5px;
+  &_textarea {
+    width: 100%;
+    height: 100px;
+  }
 }
 
