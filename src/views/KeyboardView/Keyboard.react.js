@@ -43,11 +43,14 @@ export default class Keyboard extends React.Component {
   }
 
   renderKeyboard(keyRows) {
-    return keyRows.map((keys, i) => (
-      <div key={`us-${i}`} className="keyboard_row">
-        {this.renderRow(keys)}
-      </div>
-    ));
+    return keyRows.map(({ rowClass, keys }, i) => {
+      const additionalRowClass = rowClass ? `keyboard_row-${rowClass}` : '';
+      return (
+        <div key={`us-${i}`} className={`keyboard_row ${additionalRowClass}`}>
+          {this.renderRow(keys)}
+        </div>
+      );
+    });
   }
 
   renderRow(keys) {

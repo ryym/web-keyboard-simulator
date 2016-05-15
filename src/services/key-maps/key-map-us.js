@@ -72,7 +72,7 @@ export default {
   [keyPos.CAPS_LOCK]: new Key([], ['Caps']),
   [keyPos.ALT_LEFT]: new Key([], ['Alt']),
   [keyPos.OS_LEFT]: new Key([], ['Command']),
-  [keyPos.SPACE]: new Key([], ['']),
+  [keyPos.SPACE]: new Key([], [''], { size: 3.3 }),
   [keyPos.OS_RIGHT]: new Key([], ['Command']),
   [keyPos.ALT_RIGHT]: new Key([], ['Alt']),
   [keyPos.FUNCTION]: new Key([], ['Fn'])
