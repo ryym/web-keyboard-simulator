@@ -4,6 +4,8 @@ import SideMenu from './SideMenu';
 import InputScreen from './InputScreen';
 import KeyboardView from './KeyboardView';
 
+require('./styles.scss');
+
 /**
  * KeyboardSimulator is a container of whole components.
  */
