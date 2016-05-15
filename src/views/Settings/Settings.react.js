@@ -10,16 +10,21 @@ export default function Settings({ onKeyboardTypeChange }) {
 
   return (
     <section className="setting">
-      <div className="setting-item setting_keyboard-from">
-        <span>Using</span>
-        <select onChange={handleUserKeyboardChange}>
+      <div className="setting-keyboard">
+        <select
+          className="setting-keyboard_item setting-keyboard-from"
+          onChange={handleUserKeyboardChange}
+        >
           <option value="US">US</option>
           <option value="DVORAK">Dvorak</option>
         </select>
-      </div>
-      <div className="setting-item setting_keyboard-to">
-        <span>Simulate</span>
-        <select onChange={handleSimulationKeyboardChange}>
+        <div className="setting-keyboard-arrow">
+          →
+        </div>
+        <select
+          className="setting-keyboard_item setting-keyboard-to"
+          onChange={handleSimulationKeyboardChange}
+        >
           <option value="US">US</option>
           <option value="DVORAK">Dvorak</option>
         </select>

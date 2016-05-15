@@ -2,8 +2,21 @@
 
 .input-screen {
   &_textarea {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
     width: 100%;
-    height: 100px;
+    height: 120px;
+    padding: 10px;
+
+    border-radius: 3px 3px 0 0;
+    border: 1px solid rgba(243, 88, 15, 0.3);
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(243, 88, 15, 0.5);
+      transition-property: box-shadow;
+      transition-duration: 0.5s;
+    }
   }
 }
 

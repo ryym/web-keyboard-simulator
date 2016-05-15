@@ -1,8 +1,33 @@
 .setting {
   padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 5px auto;
+  color: rgba(10, 10, 10, 0.7);
+
+  &-keyboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.4);
+
+    &-arrow {
+      margin: 0 20px;
+    }
+
+    &_item {
+      font-size: inherit;
+      width: 200px;
+      letter-spacing: 0.2em;
+      padding: 0 5px 5px;
+      box-shadow: 0 1px 0 0 #888;
+    }
+
+    &-to {
+      color: rgb(243, 88, 15);
+    }
+
+  }
 
   &-item {
     padding: 5px;
