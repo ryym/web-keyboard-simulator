@@ -20,6 +20,7 @@ export default function InputScreen(props) {
         className="input-screen_textarea"
         onKeyDown={handleKeyDown}
         onKeyUp={handleKeyUp}
+        onBlur={props.onBlur}
       />
     </section>
   );

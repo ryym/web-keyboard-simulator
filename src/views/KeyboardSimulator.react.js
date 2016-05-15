@@ -22,6 +22,7 @@ export default class KeyboardSimulator extends React.Component {
     this.changeKeyboard = this.changeKeyboard.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   render() {
@@ -48,6 +49,7 @@ export default class KeyboardSimulator extends React.Component {
               findKeyData={findKeyData}
               onKeyPressed={this.handleKeyPress}
               onKeyUp={this.handleKeyUp}
+              onBlur={this.handleBlur}
             />
             <KeyboardView
               pressedKeys={this.state.pressedKeys}
@@ -75,5 +77,9 @@ export default class KeyboardSimulator extends React.Component {
     const { pressedKeys } = this.state;
     delete pressedKeys[keyPos];
     this.setState({ pressedKeys });
+  }
+
+  handleBlur() {
+    this.setState({ pressedKeys: {} });
   }
 }
