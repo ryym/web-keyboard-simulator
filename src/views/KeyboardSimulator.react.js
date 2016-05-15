@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import SideMenu from './SideMenu';
+import Settings from './Settings';
 import InputScreen from './InputScreen';
 import KeyboardView from './KeyboardView';
 
@@ -34,7 +34,7 @@ export default class KeyboardSimulator extends React.Component {
     return (
       <main>
         <Header />
-        <SideMenu
+        <Settings
           onKeyboardTypeChange={this.changeKeyboard}
         />
         <div>

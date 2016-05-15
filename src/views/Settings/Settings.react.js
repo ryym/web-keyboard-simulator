@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SideMenu({ onKeyboardTypeChange }) {
+export default function Settings({ onKeyboardTypeChange }) {
   function handleUserKeyboardChange(event) {
     onKeyboardTypeChange('userKeyboardType', event.target.value);
   }
@@ -9,8 +9,8 @@ export default function SideMenu({ onKeyboardTypeChange }) {
   }
 
   return (
-    <section className="sidemenu">
-      <div className="sidemenu_keyboard-from">
+    <section className="settings">
+      <div className="settings_keyboard-from">
         <span>Using</span>
         <select onChange={handleUserKeyboardChange}>
           <option value="US">US</option>
@@ -18,7 +18,7 @@ export default function SideMenu({ onKeyboardTypeChange }) {
         </select>
         <span>,</span>
       </div>
-      <div className="sidemenu_keyboard-from">
+      <div className="settings_keyboard-from">
         <span>Simulate</span>
         <select onChange={handleSimulationKeyboardChange}>
           <option value="US">US</option>
