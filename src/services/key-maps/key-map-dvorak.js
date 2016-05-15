@@ -2,6 +2,20 @@ import { keyPos } from '$services/keyPos';
 import Key from './Key';
 
 export default {
+  [keyPos.ESCAPE]: new Key([], ['Esc']),
+  [keyPos.F1]: new Key([], ['F1']),
+  [keyPos.F2]: new Key([], ['F2']),
+  [keyPos.F3]: new Key([], ['F3']),
+  [keyPos.F4]: new Key([], ['F4']),
+  [keyPos.F5]: new Key([], ['F5']),
+  [keyPos.F6]: new Key([], ['F6']),
+  [keyPos.F7]: new Key([], ['F7']),
+  [keyPos.F8]: new Key([], ['F8']),
+  [keyPos.F9]: new Key([], ['F9']),
+  [keyPos.F10]: new Key([], ['F10']),
+  [keyPos.F11]: new Key([], ['F11']),
+  [keyPos.F12]: new Key([], ['F12']),
+  [keyPos.POWER]: new Key([], ['']),
   [keyPos.BACKQUOTE]: new Key(['~', '`']),
   [keyPos.DIGIT1]: new Key(['1', '!']),
   [keyPos.DIGIT2]: new Key(['2', '@']),
@@ -54,6 +68,13 @@ export default {
   [keyPos.COMMA]: new Key(['w', 'W'], ['W']),
   [keyPos.PERIOD]: new Key(['v', 'V'], ['V']),
   [keyPos.SLASH]: new Key(['z', 'Z'], ['Z']),
-  [keyPos.SHIFT_RIGHT]: new Key([], ['Shift'], { size: 2.5 })
+  [keyPos.SHIFT_RIGHT]: new Key([], ['Shift'], { size: 2.5 }),
+  [keyPos.CAPS_LOCK]: new Key([], ['Caps']),
+  [keyPos.ALT_LEFT]: new Key([], ['Alt']),
+  [keyPos.OS_LEFT]: new Key([], ['Command']),
+  [keyPos.SPACE]: new Key([], [''], { size: 3.3 }),
+  [keyPos.OS_RIGHT]: new Key([], ['Command']),
+  [keyPos.ALT_RIGHT]: new Key([], ['Alt']),
+  [keyPos.FUNCTION]: new Key([], ['Fn'])
 };
 

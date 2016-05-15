@@ -55,7 +55,12 @@ const detectFromCode = makeFunctionFromMap({
   Comma: keyPos.COMMA,
   Period: keyPos.PERIOD,
   Slash: keyPos.SLASH,
-  ShiftRight: keyPos.SHIFT_RIGHT
+  ShiftRight: keyPos.SHIFT_RIGHT,
+  AltLeft: keyPos.ALT_LEFT,
+  OSLeft: keyPos.OS_LEFT,
+  Space: keyPos.SPACE,
+  OSRight: keyPos.OS_RIGHT,
+  AltRight: keyPos.ALT_RIGHT
 });
 
 export default detectFromCode;

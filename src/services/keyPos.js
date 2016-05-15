@@ -5,6 +5,19 @@
  */
 export const keyPos = generateKeyPoses([
   'ESCAPE',
+  'F1',
+  'F2',
+  'F3',
+  'F4',
+  'F5',
+  'F6',
+  'F7',
+  'F8',
+  'F9',
+  'F10',
+  'F11',
+  'F12',
+  'POWER',
   'DIGIT1',
   'DIGIT2',
   'DIGIT3',
@@ -57,7 +70,14 @@ export const keyPos = generateKeyPoses([
   'COMMA',
   'PERIOD',
   'SLASH',
-  'SHIFT_RIGHT'
+  'SHIFT_RIGHT',
+  'CAPS_LOCK',
+  'ALT_LEFT',
+  'OS_LEFT',
+  'SPACE',
+  'OS_RIGHT',
+  'ALT_RIGHT',
+  'FUNCTION'
 ]);
 
 function generateKeyPoses(labels) {
