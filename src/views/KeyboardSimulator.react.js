@@ -15,7 +15,7 @@ export default class KeyboardSimulator extends React.Component {
 
     this.state = {
       pressedKeys: {},
-      userKeyboardType: 'US',
+      userKeyboardType: 'QWERTY',
       simulationKeyboardType: 'DVORAK'
     };
 

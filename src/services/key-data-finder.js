@@ -1,4 +1,4 @@
-import usKeyMap from './key-maps/key-map-us';
+import qwertyKeyMap from './key-maps/key-map-qwerty';
 import jisKeyMap from './key-maps/key-map-jis';
 import dvorakKeyMap from './key-maps/key-map-dvorak';
 
@@ -13,7 +13,7 @@ export function makeKeyDataFinder(keyboardType) {
 
 function selectKeyMap(keyboardType) {
   switch (keyboardType) {
-  case 'US': return usKeyMap;
+  case 'QWERTY': return qwertyKeyMap;
   case 'JIS': return jisKeyMap;
   case 'DVORAK': return dvorakKeyMap;
   }

@@ -22,8 +22,8 @@ export default function Settings(props) {
           onChange={handleUserKeyboardChange}
           value={userKeyboardType}
         >
-          <option value="US">US</option>
-          <option value="DVORAK">Dvorak</option>
+          <option value="QWERTY">QWERTY</option>
+          <option value="DVORAK">DVORAK</option>
         </select>
         <div className="setting-keyboard-arrow">
           →
@@ -33,8 +33,8 @@ export default function Settings(props) {
           onChange={handleSimulationKeyboardChange}
           value={simulationKeyboardType}
         >
-          <option value="US">US</option>
-          <option value="DVORAK">Dvorak</option>
+          <option value="QWERTY">QWERTY</option>
+          <option value="DVORAK">DVORAK</option>
         </select>
       </div>
     </section>

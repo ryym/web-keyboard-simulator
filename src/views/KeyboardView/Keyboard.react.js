@@ -1,7 +1,7 @@
 import React from 'react';
 import Key from './Key';
 import StandardKeyboard from './StandardKeyboard';
-import usKeyMap from '$services/key-maps/key-map-us';
+import qwertyKeyMap from '$services/key-maps/key-map-qwerty';
 import dvorakKeyMap from '$services/key-maps/key-map-dvorak';
 
 export default class Keyboard extends React.Component {
@@ -27,8 +27,8 @@ export default class Keyboard extends React.Component {
 
   selectKeyMap(type) {
     switch (type) {
-    case 'US':
-      return usKeyMap;
+    case 'QWERTY':
+      return qwertyKeyMap;
     case 'DVORAK':
       return dvorakKeyMap;
     }
@@ -36,7 +36,7 @@ export default class Keyboard extends React.Component {
 
   selectLayout(type) {
     switch (type) {
-    case 'US':
+    case 'QWERTY':
     case 'DVORAK':
       return StandardKeyboard;
     }
@@ -46,7 +46,7 @@ export default class Keyboard extends React.Component {
     return keyRows.map(({ rowClass, keys }, i) => {
       const additionalRowClass = rowClass ? `keyboard_row-${rowClass}` : '';
       return (
-        <div key={`us-${i}`} className={`keyboard_row ${additionalRowClass}`}>
+        <div key={`key-${i}`} className={`keyboard_row ${additionalRowClass}`}>
           {this.renderRow(keys)}
         </div>
       );
