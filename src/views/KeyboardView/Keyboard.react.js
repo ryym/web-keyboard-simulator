@@ -21,6 +21,9 @@ export default class Keyboard extends React.Component {
         <div className="keyboard_frame">
           <SelectedKeyboard renderKeyboard={this.renderKeyboard} />
         </div>
+        <div className="keyboard_footer">
+          <div className="keyboard-name">{keyboardType}</div>
+        </div>
       </div>
     );
   }

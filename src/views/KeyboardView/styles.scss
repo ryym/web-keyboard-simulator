@@ -21,6 +21,18 @@
     padding: 0;
   }
 
+  &_footer {
+    margin: 3px 0;
+    width: 100%;
+    position: relative;
+
+    .keyboard-name {
+      position: absolute;
+      right: 1em;
+      color: #2d7ee7;
+    }
+  }
+
   &_row {
     display: flex;
     margin: 3px 2px;
