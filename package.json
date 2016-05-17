@@ -6,7 +6,9 @@
     "build": "webpack",
     "start": "webpack-dev-server",
     "lint": "eslint --fix src",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "predeploy": "WEBPACK_ENV=production webpack",
+    "deploy": "node lib/deploy.js"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -26,6 +28,7 @@
     "eslint": "^2.9.0",
     "eslint-config-ryym": "^1.0.0",
     "eslint-plugin-react": "^5.0.1",
+    "gh-pages": "^0.11.0",
     "html-webpack-plugin": "^2.16.1",
     "postcss-loader": "^0.9.1",
     "sass-loader": "^3.2.0",

@@ -4,9 +4,13 @@ const HtmlTemplatePlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pcssAutoprefixer = require('autoprefixer');
 
+const ENV = process.env.WEBPACK_ENV || 'development';
+
 const SRC_PATH = path.join(__dirname, 'src');
 const BUILD_PATH = path.join(__dirname, 'build');
 const HTML_TEMPLATE_PATH = path.join(SRC_PATH, 'index.template.html');
+
+const isDevEnv = (ENV === 'development');
 
 module.exports = {
   resolve: {
@@ -66,7 +70,7 @@ module.exports = {
     }),
 
     new webpack.DefinePlugin({
-      '$$Config.LOG_LEVEL': "'debug'"
+      '$$Config.LOG_LEVEL': isDevEnv ? "'debug'" : "'info'"
     })
   ]
 };
