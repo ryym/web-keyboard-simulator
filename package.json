@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "lint": "eslint --fix src",
     "test": "npm run lint",
-    "predeploy": "WEBPACK_ENV=production webpack",
+    "predeploy": "NODE_ENV=production webpack",
     "deploy": "node lib/deploy.js"
   },
   "engines": {
