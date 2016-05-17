@@ -1,3 +1,7 @@
+/* Settings styles */
+
+@import '../shared';
+
 .setting {
   padding: 5px;
   margin: 5px auto;
@@ -24,7 +28,7 @@
     }
 
     &-to {
-      color: rgb(243, 88, 15);
+      color: $c-orange;
     }
 
   }

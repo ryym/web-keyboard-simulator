@@ -1,3 +1,7 @@
+/* Header styles */
+
+@import '../shared';
+
 .header {
   background-color: rgba(245, 248, 248, 1);
   display: flex;
@@ -9,7 +13,7 @@
     padding: 0 10px;
     font-size: 24px;
     font-weight: bold;
-    color: rgb(243, 88, 15);
+    color: $c-orange;
   }
 
   &_nav {
